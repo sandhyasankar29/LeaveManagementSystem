@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    image: "sandhyasankar/lms_server_side:latest"
+    ports:
+      - "3001:3001"
+  frontend:
+    image: "sandhyasankar/lms_frontend:latest"
+    ports:
+      - "3000:3000"
+    links:
+      - "backend:be"
